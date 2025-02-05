@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Creative LLM Explorer">
+<meta name="dcterms.date" content="2025-02-05">
+<meta name="description" content="Testing whether large language models can craft and solve cryptic crossword clues">
 
-<title>My Explorations with LLMs</title>
+<title>Can LLMs Master Cryptic Clues? – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5027bf1c1f92ac6615724d89c8213d6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5027bf1c1f92ac6615724d89c8213d6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +69,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,125 +115,109 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Can LLMs Master Cryptic Clues?</h1>
+                  <div>
+        <div class="description">
+          Testing whether large language models can craft and solve cryptic crossword clues
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">language</div>
+                <div class="quarto-category">reasoning</div>
+                <div class="quarto-category">cryptic_crosswords</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Creative LLM Explorer </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 5, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y3J5cHRpY19jcm9zc3dvcmRz">cryptic_crosswords <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGFuZ3VhZ2U=">language <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVhc29uaW5n">reasoning <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>For many puzzle enthusiasts, <strong>cryptic crosswords</strong> represent the pinnacle of clever wordplay. Crafting (and solving) cryptic clues requires two parts:</p>
+<ol type="1">
+<li>A <strong>definition</strong> of the answer</li>
+<li>A <strong>wordplay</strong> hint (an anagram, hidden word, or another playful manipulation)</li>
+</ol>
+<p>These two components are typically combined in a single short clue, creating a riddle that demands careful linguistic or logical parsing. The question we want to answer in this post is:</p>
+<blockquote class="blockquote">
+<p><strong>Can a Large Language Model (LLM) craft valid cryptic clues that both define the word and present correct wordplay?</strong></p>
+</blockquote>
+<p>Additionally, we will see if an LLM can interpret the rationale behind cryptic clues—essentially, can it solve them and provide a breakdown of the wordplay?</p>
+</section>
+<section id="background-on-cryptic-clues" class="level2">
+<h2 class="anchored" data-anchor-id="background-on-cryptic-clues">Background on Cryptic Clues</h2>
+<p>A traditional (UK-style) cryptic clue has:</p>
+<ol type="1">
+<li><strong>Definition part</strong>: A direct definition of the solution word/phrase (similar to a standard crossword clue).</li>
+<li><strong>Wordplay part</strong>: A set of instructions for how to manipulate letters (anagrams, hidden words, homophones, reversals, etc.) to arrive at the same solution.</li>
+</ol>
+<p>For example, a classic short cryptic clue is:</p>
+<blockquote class="blockquote">
+<p><em>Doctor in short supply (3)</em></p>
+</blockquote>
+<ul>
+<li>The answer is <code>DOC</code>.</li>
+<li><strong>Definition</strong>: “Doctor” is the direct definition for “doc”.</li>
+<li><strong>Wordplay</strong>: “in short supply” is instructing us to take “supply” and shorten it (<code>suppl</code>) or notice that “in short” might be indicating to chop off the last letters. The exact mechanism can vary depending on style, but it usually references a form of truncation or pun.</li>
+</ul>
+</section>
+<section id="prompting-an-llm-to-create-cryptic-clues" class="level2">
+<h2 class="anchored" data-anchor-id="prompting-an-llm-to-create-cryptic-clues">Prompting an LLM to Create Cryptic Clues</h2>
+<p>We experimented with prompting a well-known LLM (we used GPT-4 in this case, but you can attempt similar prompts with other models). Our prompt was structured to explain the concept:</p>
+<blockquote class="blockquote">
+<p>“Please create a cryptic crossword clue for the word <strong>ACME</strong>. The clue must include a definition and a wordplay segment, in typical cryptic style.”</p>
+</blockquote>
+<section id="gpt-4s-response" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-4s-response">GPT-4’s Response</h3>
+<pre><code>A top tip for Emily’s company (4)</code></pre>
+<p><strong>Proposed Explanation</strong>: - <strong>Definition</strong>: “A top” is a concise definition for ACME (meaning the highest point). - <strong>Wordplay</strong>: “tip for Emily’s company” might be instructing us to take the first letter (tip) of “Emily” (E) plus a synonym for “company” (e.g., C0 for ‘Co.’?), forming “E + C0” = “EC0”? That’s not exactly ACME.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li><strong>LLMs can approximate</strong> cryptic crossword clue styles, especially if you provide instructions on structure and examples.</li>
+<li><strong>Accuracy varies</strong>: Some attempts fail to connect the wordplay steps properly, indicating the complexity of cryptic logic.</li>
+<li><strong>Chain-of-Thought</strong>: When asked to <em>explain</em> the solution, LLMs often give plausible justifications, demonstrating how they might parse the puzzle.</li>
+</ul>
+<p>Ultimately, cryptic crosswords demand <em>exactness</em> in logic, and LLMs are still prone to small mistakes in letter manipulation or wordplay instructions. However, with iterative prompts and examples, they can learn to craft passable (sometimes even excellent) cryptic clues—and solve them!</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ2xhbmd1YWdlJTJDcmVhc29uaW5nJTJDY3J5cHRpY19jcm9zc3dvcmRz" data-listing-date-sort="1738713600000" data-listing-file-modified-sort="1738771578066" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="438">
-<div class="thumbnail">
-<p><a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external"></a></p><a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external">Can LLMs Master Cryptic Clues?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bGFuZ3VhZ2U='); return false;">
-language
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cmVhc29uaW5n'); return false;">
-reasoning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3J5cHRpY19jcm9zc3dvcmRz'); return false;">
-cryptic_crosswords
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external">Testing whether large language models can craft and solve cryptic crossword clues</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/001_Cryptic/cryptic_clues_experiment.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2025
-</div>
-<div class="listing-author">
-Creative LLM Explorer
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1738771578065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail">
-<p><a href="./posts/000_test_post/index.html" class="no-external"></a></p><a href="./posts/000_test_post/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/000_test_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/000_test_post/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">
-prompting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">
-logic
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/000_test_post/index.html" class="no-external">An example post from a Jupyter notebook</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
