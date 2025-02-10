@@ -14,20 +14,6 @@
     "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Explorations with LLMs",
-    "section": "",
-    "text": "Can LLMs Master Cryptic Clues?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nreasoning\n\n\ncryptic_crosswords\n\n\n\nTesting whether large language models can craft and solve cryptic crossword clues\n\n\n\n\n\nFeb 5, 2025\n\n\nCreative LLM Explorer\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
     "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html",
     "href": "posts/001_Cryptic/cryptic_clues_experiment.html",
     "title": "Can LLMs Master Cryptic Clues?",
@@ -61,5 +47,54 @@
     "title": "Can LLMs Master Cryptic Clues?",
     "section": "Conclusion",
     "text": "Conclusion\n\nLLMs can approximate cryptic crossword clue styles, especially if you provide instructions on structure and examples.\nAccuracy varies: Some attempts fail to connect the wordplay steps properly, indicating the complexity of cryptic logic.\nChain-of-Thought: When asked to explain the solution, LLMs often give plausible justifications, demonstrating how they might parse the puzzle.\n\nUltimately, cryptic crosswords demand exactness in logic, and LLMs are still prone to small mistakes in letter manipulation or wordplay instructions. However, with iterative prompts and examples, they can learn to craft passable (sometimes even excellent) cryptic clues—and solve them!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Explorations with LLMs",
+    "section": "",
+    "text": "Can LLMs Master Cryptic Clues?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nreasoning\n\n\ncryptic_crosswords\n\n\n\nTesting whether large language models can craft and solve cryptic crossword clues\n\n\n\n\n\nFeb 5, 2025\n\n\nCreative LLM Explorer\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master the Art of the Comedic Roast?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nstyle\n\n\nhumor\n\n\n\nExploring whether large language models can produce clever, good-natured roasts without crossing ethical lines.\n\n\n\n\n\nFeb 5, 2025\n\n\nComedy Enthusiast LLM\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/002_Roast/002_Roast.html",
+    "href": "posts/002_Roast/002_Roast.html",
+    "title": "Can LLMs Master the Art of the Comedic Roast?",
+    "section": "",
+    "text": "Welcome to a deeper dive into the comedic side of Large Language Models (LLMs). Humans love to use humor in conversation, and one particular comedic style is the roast—lighthearted (sometimes pointed) jabs at a friend or colleague.\nBut can LLMs really master the art of the roast? Can they craft jokes that walk the fine line between playful and offensive? Let’s find out by analyzing both the potential and the pitfalls of using LLMs as comedic roasters."
+  },
+  {
+    "objectID": "posts/002_Roast/002_Roast.html#introduction",
+    "href": "posts/002_Roast/002_Roast.html#introduction",
+    "title": "Can LLMs Master the Art of the Comedic Roast?",
+    "section": "",
+    "text": "Welcome to a deeper dive into the comedic side of Large Language Models (LLMs). Humans love to use humor in conversation, and one particular comedic style is the roast—lighthearted (sometimes pointed) jabs at a friend or colleague.\nBut can LLMs really master the art of the roast? Can they craft jokes that walk the fine line between playful and offensive? Let’s find out by analyzing both the potential and the pitfalls of using LLMs as comedic roasters."
+  },
+  {
+    "objectID": "posts/002_Roast/002_Roast.html#what-is-a-roast",
+    "href": "posts/002_Roast/002_Roast.html#what-is-a-roast",
+    "title": "Can LLMs Master the Art of the Comedic Roast?",
+    "section": "What is a Roast?",
+    "text": "What is a Roast?\nA traditional roast is a comedic event where an “honored” individual is teased in a good-natured way by friends or peers. The hallmark of a roast is friendly mockery—the jokes might be pointed, but there’s an underlying camaraderie. Classic roasts thrive on:\n\nHyperbolic Insults: Exaggerated jabs that everyone (including the target) realizes are not serious.\nInside Jokes: References to the roastee’s habits, quirks, or past slip-ups that are well known among participants.\nOccasional Praise: Balancing comedic barbs with sincere compliments or expressions of respect.\n\nThis balance requires a nuanced understanding of context, social norms, and comedic timing—skills that might be challenging for an AI to replicate accurately."
+  },
+  {
+    "objectID": "posts/002_Roast/002_Roast.html#the-challenge-for-llms",
+    "href": "posts/002_Roast/002_Roast.html#the-challenge-for-llms",
+    "title": "Can LLMs Master the Art of the Comedic Roast?",
+    "section": "The Challenge for LLMs",
+    "text": "The Challenge for LLMs\n\nContextual Awareness: To roast effectively, you need detailed knowledge of the person’s traits. If an LLM lacks context, it may resort to generic insults.\nTone Management: Roasts should be playful, not hateful. LLMs risk crossing ethical lines if they produce content that is perceived as harassment or targeted discrimination.\nCultural Sensitivity: What is funny in one culture might be taboo in another. LLMs need a sophisticated calibration to avoid offending audiences.\nRisk of Repetition: LLMs can repeat the same jokes or structures, making the roast feel stale or formulaic. Human roasts are typically filled with creativity and spontaneity."
+  },
+  {
+    "objectID": "posts/002_Roast/002_Roast.html#experimenting-with-prompts",
+    "href": "posts/002_Roast/002_Roast.html#experimenting-with-prompts",
+    "title": "Can LLMs Master the Art of the Comedic Roast?",
+    "section": "Experimenting with Prompts",
+    "text": "Experimenting with Prompts\nTo test the comedic roast abilities of a popular LLM (GPT-4, in our case), we tried a variety of prompts, each with different levels of context and constraints. For example:\nPrompt: \"You're at a friendly comedy roast for Alex. Alex is known for being late to everything and drinking way too much coffee. Craft five lighthearted roast jokes that Alex would find funny.\"\nThe LLM responded with:\n\n“Alex is always running on coffee fumes—seriously, your bloodstream must be 80% espresso by now!”\n“I asked Alex for the time once—he showed up with a latte 15 minutes late to tell me it was 3 PM… yesterday.”\n“Don’t bother ordering decaf around Alex; he’ll just label you an underachiever.”\n“We were all worried Alex wouldn’t make it here—turns out the only place he’s ever on time for is the cafe.”\n“Alex, if tardiness was an Olympic sport, you’d still arrive last to the podium—coffee in hand, of course!”"
   }
 ]
