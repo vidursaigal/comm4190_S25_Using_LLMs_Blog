@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/003_ChoiceDilemma/ChoiceDilemmas.html",
       "/posts/001_Cryptic/cryptic_clues_experiment.html",
-      "/posts/002_Roast/002_Roast.html",
+      "/posts/002_Roast/Roast.html",
       "/posts/000_test_post/index.html"
     ]
   }
