@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-02-10T21:07:06.012Z</lastmod>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-02-17T06:17:48.508Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_Cryptic/cryptic_clues_experiment.html</loc>
-    <lastmod>2025-02-10T21:07:06.013Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-02-10T21:07:06.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-02-10T21:07:06.011Z</lastmod>
+    <lastmod>2025-02-17T06:17:48.510Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/003_ChoiceDilemma/ChoiceDilemmas.html</loc>
-    <lastmod>2025-02-10T21:07:06.013Z</lastmod>
+    <lastmod>2025-02-17T06:17:48.510Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
+    <lastmod>2025-02-17T06:17:48.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-02-17T06:17:48.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/004_DigitalCryptid/Thoughts.html</loc>
+    <lastmod>2025-02-17T06:17:48.510Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/002_Roast/Roast.html</loc>
-    <lastmod>2025-02-10T21:07:06.013Z</lastmod>
+    <lastmod>2025-02-17T06:17:48.510Z</lastmod>
   </url>
 </urlset>

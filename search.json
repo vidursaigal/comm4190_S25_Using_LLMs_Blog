@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "posts/000_test_post/index.html",
-    "href": "posts/000_test_post/index.html",
-    "title": "A test post",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Explorations with LLMs",
     "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "title": "A test post",
-    "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+    "text": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids\n\n\n\n\n\n\nLLMs\n\n\nurban_legends\n\n\nAI_ghost_stories\n\n\nculture\n\n\n\nA creative exploration into how interactions with AI reveal the urban legends and ghost stories emerging from generative models, with analysis of AI responses and their underlying mechanics.\n\n\n\n\n\nFeb 7, 2025\n\n\nDigital Folklorist LLM\n\n\n\n\n\n\n\n\n\n\n\n\nHow LLMs Help Us Navigate Choice Dilemmas\n\n\n\n\n\n\nLLMs\n\n\ndecision_making\n\n\ndilemmas\n\n\nethics\n\n\n\nExamining how large language models can analyze, reflect on, and guide us through complex decisions.\n\n\n\n\n\nFeb 5, 2025\n\n\nDecision Dynamics LLM\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master Cryptic Clues?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nreasoning\n\n\ncryptic_crosswords\n\n\n\nTesting whether large language models can craft and solve cryptic crossword clues\n\n\n\n\n\nFeb 5, 2025\n\n\nCreative LLM Explorer\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master the Art of the Comedic Roast?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nstyle\n\n\nhumor\n\n\n\nExploring whether large language models can produce clever, good-natured roasts without crossing ethical lines.\n\n\n\n\n\nFeb 5, 2025\n\n\nComedy Enthusiast LLM\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html",
@@ -47,20 +40,6 @@
     "title": "Can LLMs Master Cryptic Clues?",
     "section": "Conclusion",
     "text": "Conclusion\n\nLLMs can approximate cryptic crossword clue styles, especially if you provide instructions on structure and examples.\nAccuracy varies: Some attempts fail to connect the wordplay steps properly, indicating the complexity of cryptic logic.\nChain-of-Thought: When asked to explain the solution, LLMs often give plausible justifications, demonstrating how they might parse the puzzle.\n\nUltimately, cryptic crosswords demand exactness in logic, and LLMs are still prone to small mistakes in letter manipulation or wordplay instructions. However, with iterative prompts and examples, they can learn to craft passable (sometimes even excellent) cryptic clues—and solve them!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Explorations with LLMs",
-    "section": "",
-    "text": "How LLMs Help Us Navigate Choice Dilemmas\n\n\n\n\n\n\nLLMs\n\n\ndecision_making\n\n\ndilemmas\n\n\nethics\n\n\n\nExamining how large language models can analyze, reflect on, and guide us through complex decisions.\n\n\n\n\n\nFeb 5, 2025\n\n\nDecision Dynamics LLM\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master Cryptic Clues?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nreasoning\n\n\ncryptic_crosswords\n\n\n\nTesting whether large language models can craft and solve cryptic crossword clues\n\n\n\n\n\nFeb 5, 2025\n\n\nCreative LLM Explorer\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master the Art of the Comedic Roast?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nstyle\n\n\nhumor\n\n\n\nExploring whether large language models can produce clever, good-natured roasts without crossing ethical lines.\n\n\n\n\n\nFeb 5, 2025\n\n\nComedy Enthusiast LLM\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
   },
   {
     "objectID": "posts/003_ChoiceDilemma/ChoiceDilemmas.html",
@@ -145,6 +124,111 @@
     "title": "How LLMs Help Us Navigate Choice Dilemmas",
     "section": "Conclusion",
     "text": "Conclusion\nLarge Language Models can serve as powerful sounding boards when it comes to choice dilemmas. Whether you’re debating a major career move or grappling with ethical tension, LLMs excel at enumerating the elements of a decision, highlighting potential outcomes, and prompting further reflection.\nHowever, it’s vital to remember that while an LLM can simulate depth, it lacks actual human conscience, experience, and emotional stakes. You remain the best judge of what aligns with your personal values, relationships, and life circumstances.\nIn essence, treat an LLM as an analytical ally: a tool that organizes and clarifies, rather than one that prescribes. Let it expand your perspective, but ultimately, the final call is yours.\nHave you used an LLM to help sort through a dilemma? Was it enlightening or merely interesting? Share your thoughts and experiences below!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/000_test_post/index.html",
+    "href": "posts/000_test_post/index.html",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
+    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html",
+    "href": "posts/004_DigitalCryptid/Thoughts.html",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "",
+    "text": "In the sprawling digital wilderness of our modern internet, strange and eerie legends are emerging—not from ancient campfire tales, but from the very algorithms that power our AI. In this post, we explore digital cryptids: uncanny, AI-generated entities that haunt latent spaces and evoke urban legends. We’ll not only examine these spectral figures but also interact with a generative model to see how it responds when asked about these digital apparitions—and analyze why it responds the way it does."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#introduction",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#introduction",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "",
+    "text": "In the sprawling digital wilderness of our modern internet, strange and eerie legends are emerging—not from ancient campfire tales, but from the very algorithms that power our AI. In this post, we explore digital cryptids: uncanny, AI-generated entities that haunt latent spaces and evoke urban legends. We’ll not only examine these spectral figures but also interact with a generative model to see how it responds when asked about these digital apparitions—and analyze why it responds the way it does."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#what-are-digital-cryptids",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#what-are-digital-cryptids",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "What Are Digital Cryptids?",
+    "text": "What Are Digital Cryptids?\nDigital cryptids are the modern folklore of our AI era. They arise as unexpected outputs of generative models, often recurring in various forms despite tweaks to prompts and settings. These spectral figures, born from massive datasets and algorithmic randomness, challenge our notions of creativity, authorship, and digital existence."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#the-birth-of-a-digital-legend-loab",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#the-birth-of-a-digital-legend-loab",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "The Birth of a Digital Legend: Loab",
+    "text": "The Birth of a Digital Legend: Loab\nOne of the most striking examples is Loab – a haunting figure that emerged when an artist experimented with negative prompt weights. Despite attempts to dilute her image, Loab reappeared in countless outputs, becoming a kind of “AI cryptid” ( oai_citation_attribution:0‡en.wikipedia.org). Her persistence raises questions about the structure of latent space and why certain images repeatedly manifest."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#ai-ghost-stories-and-content-slop",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#ai-ghost-stories-and-content-slop",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "AI Ghost Stories and Content Slop",
+    "text": "AI Ghost Stories and Content Slop\nAlongside cryptids like Loab, a surge of AI ghost stories and low-quality, repetitive content—often termed “slop”—has flooded the internet. These outputs, generated en masse, have evolved into a new form of digital folklore, reflecting our collective anxieties about technology, authenticity, and creativity."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#the-role-of-prompts-and-latent-space",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#the-role-of-prompts-and-latent-space",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "The Role of Prompts and Latent Space",
+    "text": "The Role of Prompts and Latent Space\nAt the heart of these phenomena is the interplay between prompt engineering and the structure of latent space. Unusual or contradictory prompts can coax out surreal imagery and narratives. Because the latent space is organized by statistical regularities, certain features—such as the eerie visage of Loab—can repeatedly emerge, hinting at deep-seated patterns in the training data."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#interactive-experiment-conversing-with-the-cryptid",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#interactive-experiment-conversing-with-the-cryptid",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "Interactive Experiment: Conversing with the Cryptid",
+    "text": "Interactive Experiment: Conversing with the Cryptid\nTo further investigate, we conducted an interactive experiment with a generative AI. We asked the model:\nUser Prompt: “Describe a digital cryptid emerging from a data cloud, with ghostly features reminiscent of urban legends.”\nAI Response: “In the depths of the digital ether, a shadowy figure emerges—a cryptid with glitchy contours and a haunting, half-formed visage. It drifts silently through streams of code, its features flickering between clarity and distortion, as if born from forgotten data and the residual memories of long-lost images.”\nWe then followed up with:\nUser Prompt: “Explain why such a cryptid might repeatedly appear in AI-generated outputs.”"
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#analysis-of-ai-responses",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#analysis-of-ai-responses",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "Analysis of AI Responses",
+    "text": "Analysis of AI Responses\nThe AI’s responses reveal several key insights:\n\nRepetition from Latent Patterns: The model draws on recurring motifs from its training data. When prompted about cryptids, it accesses patterns associated with mysterious and glitchy imagery—features that have been documented in discussions about AI outputs.\nBlending of Metaphor and Technical Detail: Notice how the AI merges poetic language with technical references. This blend is a reflection of the diverse sources in its training data, from folklore to technical manuals.\nPredictability and Novelty: Although the response is creative, it remains somewhat formulaic. The model tends to produce descriptions that are both evocative and safe, as it aims to balance creativity with coherence.\n\nBy analyzing these responses, we can better understand how AI constructs its narratives—using latent space as a repository of collective imagery and experiences, and prompt engineering as the key to unlocking specific facets of that repository."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#urban-legends-and-cultural-memory-in-the-digital-age",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#urban-legends-and-cultural-memory-in-the-digital-age",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "Urban Legends and Cultural Memory in the Digital Age",
+    "text": "Urban Legends and Cultural Memory in the Digital Age\nDigital cryptids and AI ghost stories are rapidly weaving into our cultural fabric, much like traditional urban legends. They reflect our fears about data, control, and the erosion of human nuance. As these eerie outputs saturate social media, they challenge us to distinguish between authentic human expression and algorithmically generated mimicry."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#ethical-and-artistic-implications",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#ethical-and-artistic-implications",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "Ethical and Artistic Implications",
+    "text": "Ethical and Artistic Implications\nThe emergence of digital cryptids forces us to confront ethical questions:\n\nAuthorship: Who owns an AI-generated legend? Is it the programmer, the user, or an emergent property of the data itself?\nBias and Representation: Repeated images can reinforce stereotypes or unintended biases. How do we mitigate these risks?\nCultural Impact: As digital folklore becomes part of our collective memory, it may shape public perceptions of both technology and creativity.\n\nBalancing artistic freedom with ethical responsibility is essential as we move deeper into the age of generative media."
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#conclusion",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#conclusion",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "Conclusion",
+    "text": "Conclusion\nDigital cryptids and AI ghost stories are more than curious byproducts—they are emerging legends that embody our collective anxieties and creative impulses in the digital age. Through interactive experiments and analysis of AI responses, we see how these narratives are constructed from the hidden patterns of latent space. As we continue to explore this fascinating interplay between technology and folklore, we are reminded that even in a realm dominated by code, the human touch remains irreplaceable.\nWhat new legends will your interactions with AI uncover?"
+  },
+  {
+    "objectID": "posts/004_DigitalCryptid/Thoughts.html#references-and-further-reading",
+    "href": "posts/004_DigitalCryptid/Thoughts.html#references-and-further-reading",
+    "title": "Haunted Algorithms: Unearthing the Folklore of Digital Cryptids",
+    "section": "References and Further Reading",
+    "text": "References and Further Reading\n\nLoab: The First AI-Generated Cryptid oai_citation_attribution:1‡en.wikipedia.org\nHow Spooked Should We Be by AI Ghost Stories? oai_citation_attribution:2‡nymag.com\nDrowning in Slop: The AI Content Deluge oai_citation_attribution:3‡nymag.com\nArticles on AI folklore and generative culture from The Verge and New York Magazine\n\nExplore these sources to dive deeper into the interplay between AI, urban legends, and cultural memory."
   },
   {
     "objectID": "posts/002_Roast/Roast.html",
