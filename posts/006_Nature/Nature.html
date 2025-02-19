@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vidur Saigal">
+<meta name="dcterms.date" content="2025-02-19">
+<meta name="description" content="Exploring how an LLM reasons about nature and translates plant growth data and simulation models into rich narratives about a digital garden, capturing themes of nature, decay, and regeneration that resonate with our uniquely human sensory experiences.">
+
+<title>Virtual Botanical Gardens – Narratives from Simulated Growth – My Explorations with LLMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5c67a7444eebc356e54fdce0a63e8750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Explorations with LLMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/vidursaigal"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/vidur_saigal"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Virtual Botanical Gardens – Narratives from Simulated Growth</h1>
+                  <div>
+        <div class="description">
+          Exploring how an LLM reasons about nature and translates plant growth data and simulation models into rich narratives about a digital garden, capturing themes of nature, decay, and regeneration that resonate with our uniquely human sensory experiences.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">digital_gardens</div>
+                <div class="quarto-category">simulation</div>
+                <div class="quarto-category">nature</div>
+                <div class="quarto-category">creative_narratives</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vidur Saigal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 19, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Imagine a garden that exists not in the physical world, but as an intricate tapestry of data—a digital ecosystem where plant growth is simulated through algorithms, and every leaf, stem, and flower is born from lines of code. In our post today, we delve into the concept of <strong>Virtual Botanical Gardens</strong>—narratives born from simulated growth data. We explore how large language models (LLMs) interpret plant growth data, how they weave themes of nature, decay, and regeneration into storytelling, and how these narratives resonate with the human senses.</p>
+</section>
+<section id="the-digital-garden-data-meets-nature" class="level2">
+<h2 class="anchored" data-anchor-id="the-digital-garden-data-meets-nature">The Digital Garden: Data Meets Nature</h2>
+<p>Digital botanical gardens use real plant growth data and simulation models to recreate ecosystems entirely within a virtual space. These simulations can incorporate:</p>
+<ul>
+<li><strong>Time-series data</strong> that tracks growth patterns over days, months, or years.</li>
+<li><strong>Environmental variables</strong> such as light, temperature, and humidity.</li>
+<li><strong>Morphological changes</strong> that reflect plant development, decay, and regeneration.</li>
+</ul>
+<p>By feeding these complex datasets into an LLM, we can generate rich narratives that capture the lifecycle of a digital plant—from its sprouting as a delicate seedling to its eventual decay and subsequent regeneration. The resulting story isn’t just a dry recitation of data; it’s imbued with metaphor and emotion, echoing the intrinsic human connection to nature.</p>
+</section>
+<section id="how-llms-reason-about-nature" class="level2">
+<h2 class="anchored" data-anchor-id="how-llms-reason-about-nature">How LLMs Reason About Nature</h2>
+<p>LLMs are trained on vast amounts of text, including literature, scientific papers, and even poetic descriptions of nature. When prompted with plant growth data or simulation models, the AI draws on this diverse training to interpret and articulate the story behind the numbers.</p>
+<p>For instance, an LLM might link the cyclical nature of plant growth to themes of rebirth and decay. It can recognize the symbolism of a withering leaf as a metaphor for mortality, and the sprouting of new buds as an emblem of hope and regeneration. This process is both statistical and creative—an interplay of learned patterns and emergent narrative synthesis that reflects our uniquely human sensory and emotional experience of nature.</p>
+</section>
+<section id="interactive-experiment-prompting-the-digital-garden" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-experiment-prompting-the-digital-garden">Interactive Experiment: Prompting the Digital Garden</h2>
+<p>To see this process in action, we conducted an experiment. We provided the AI with simulated plant growth data and a descriptive prompt:</p>
+<p><strong>User Prompt:</strong></p>
+<blockquote class="blockquote">
+<p>“Using the following plant growth data, generate a narrative about a digital garden that explores the themes of growth, decay, and regeneration.”</p>
+</blockquote>
+<pre><code>Data: Day 1: Seed planted; Day 5: Tiny sprout emerges; Day 15: Leaves unfurl; Day 30: Flower blooms; Day 45: Signs of wilting; Day 60: Petals fall; Day 75: New buds form near the base.</code></pre>
+<p><strong>AI Response:</strong></p>
+<blockquote class="blockquote">
+<p>“In a quiet corner of the digital realm, a seed was planted—an embodiment of potential and mystery. By day five, a tender sprout emerged, reaching upward as if yearning for the warmth of an unseen sun. As days turned into weeks, the plant unfurled its leaves in a display of delicate resilience, only to burst forth with a vibrant flower on day thirty—a fleeting moment of beauty and perfection.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>However, nature in its infinite wisdom is cyclical. By day forty-five, the once radiant petals began to wilt, a silent testament to the inevitability of decay. Yet, in this decline, there was promise; for by day sixty, the petals had fallen away, nurturing the soil of the digital garden. On day seventy-five, new buds emerged near the base, heralding a quiet rebirth—a reminder that within every ending lies the seed of a new beginning.”</p>
+</blockquote>
+</section>
+<section id="analyzing-the-ais-narrative-process" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-the-ais-narrative-process">Analyzing the AI’s Narrative Process</h2>
+<p>The response above offers a fascinating glimpse into how an LLM reasons about a digital ecosystem. Here are some key points of analysis:</p>
+<ol type="1">
+<li><strong>Symbolic Language:</strong>
+<ul>
+<li>The AI begins by describing the seed as an “embodiment of potential and mystery,” a phrase that transforms raw data into a poetic symbol.</li>
+</ul></li>
+<li><strong>Temporal Progression:</strong>
+<ul>
+<li>The narrative follows the provided timeline, mirroring the natural progression of growth and decay. The transition from bloom to wilting to regeneration is articulated with evocative language.</li>
+</ul></li>
+<li><strong>Cycle of Decay and Rebirth:</strong>
+<ul>
+<li>The AI emphasizes the cyclical nature of life, highlighting that decay (wilting petals) is a necessary precursor to regeneration (new buds forming).</li>
+</ul></li>
+<li><strong>Human Sensory Elements:</strong>
+<ul>
+<li>Phrases such as “reaching upward as if yearning for the warmth of an unseen sun” evoke human feelings of hope, longing, and renewal. These descriptions resonate with our innate sensory experiences of nature, despite being generated entirely from data.</li>
+</ul></li>
+</ol>
+</section>
+<section id="additional-experiment-sensory-impressions-of-a-digital-garden" class="level2">
+<h2 class="anchored" data-anchor-id="additional-experiment-sensory-impressions-of-a-digital-garden">Additional Experiment: Sensory Impressions of a Digital Garden</h2>
+<p>We pushed the experiment further by prompting the AI to focus on sensory details. Consider this prompt:</p>
+<p><strong>User Prompt:</strong></p>
+<blockquote class="blockquote">
+<p>“Describe the sensory experience of walking through a digital botanical garden where plant growth is driven by simulation data. Focus on the sights, sounds, and emotional responses elicited by the environment.”</p>
+</blockquote>
+<p><strong>Simulated AI Response:</strong></p>
+<blockquote class="blockquote">
+<p>“As you wander through the digital botanical garden, a vibrant mosaic of simulated life unfolds before you. The colors are hyper-real—each petal and leaf is rendered in brilliant, algorithmically enhanced hues that shift with the simulated light. The gentle rustle of leaves, though synthesized, carries an uncanny realism, as if the garden itself whispers secrets of growth and decay.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The air is filled with a subtle hum, a digital symphony composed of the soft pulses of simulated wind and the rhythmic cadence of virtual raindrops. There is an underlying melancholy in the decay of once-luminous flowers, yet an even stronger sense of hope emerges as new buds push through the virtual soil. This environment, though born of data, stirs memories of sunlit afternoons in a forgotten orchard, evoking a bittersweet blend of nostalgia and wonder.”</p>
+</blockquote>
+</section>
+<section id="discussion-nature-data-and-the-human-element" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-nature-data-and-the-human-element">Discussion: Nature, Data, and the Human Element</h2>
+<p>The narratives generated by the LLM demonstrate a compelling synthesis of data-driven information and poetic human expression. Here are a few reflections:</p>
+<ul>
+<li><p><strong>Interplay of Data and Metaphor:</strong> The AI transforms numerical and categorical data into metaphors that mirror the organic processes of nature. It shows that even structured data can be imbued with emotion and meaning.</p></li>
+<li><p><strong>Resonance with Human Experience:</strong> Despite its origins in code, the narrative resonates with uniquely human experiences—our perception of beauty, loss, and rebirth in nature. This suggests that the way we interpret sensory information can be effectively modeled, at least in part, by AI.</p></li>
+<li><p><strong>The Aesthetic of Simulated Growth:</strong> The concept of a digital garden where every element—from the color of a leaf to the sound of simulated wind—is generated from data challenges our understanding of what it means to experience nature. It blurs the boundaries between the natural and the artificial, inviting us to reconsider the essence of sensory beauty and emotional connection.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Virtual Botanical Gardens offer a fascinating lens through which to explore the intersection of data, nature, and human perception. The narratives generated by our LLM not only reflect the structured progression of plant growth and decay but also evoke the sensory and emotional richness that defines our experience of the natural world. While these simulations are driven by data, the stories they tell remind us that beauty and meaning can be found in the most unexpected places—even in an ecosystem entirely created from algorithms.</p>
+<p>As we continue our series on biological data and creative AI, we invite you to consider: What does nature mean in a digital age? How do our sensory experiences inform our understanding of both real and simulated life? Share your thoughts and experiment with your own prompts—let’s explore the digital garden together.</p>
+</section>
+<section id="references-and-further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="references-and-further-reading">References and Further Reading</h2>
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/">NCBI: Genomic and Botanical Data</a></li>
+<li><a href="https://www.plantsimulation.com/">Plant Growth Simulation Models</a></li>
+<li><a href="https://www.jstor.org/">Philosophy of Nature in Literature</a></li>
+<li><a href="https://www.artandtechnology.org/">The Aesthetics of Digital Landscapes</a></li>
+</ul>
+<p>Explore these resources for a deeper dive into the convergence of digital data and natural beauty, and the emerging role of AI in reimagining our sensory world.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/vidursaigal\.github\.io\/comm4190_S25_Using_LLMs_Blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
