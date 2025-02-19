@@ -2,10 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/005_BiologicalData/DNAProtein.html",
       "/posts/004_DigitalCryptid/Thoughts.html",
       "/posts/003_ChoiceDilemma/ChoiceDilemmas.html",
-      "/posts/001_Cryptic/cryptic_clues_experiment.html",
       "/posts/002_Roast/Roast.html",
+      "/posts/001_Cryptic/cryptic_clues_experiment.html",
       "/posts/000_test_post/index.html"
     ]
   }
