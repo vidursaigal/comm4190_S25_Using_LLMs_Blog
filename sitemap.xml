@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-02-19T18:02:55.429Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_Cryptic/cryptic_clues_experiment.html</loc>
-    <lastmod>2025-02-19T18:02:55.431Z</lastmod>
-  </url>
-  <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/005_BiologicalData/DNAProtein.html</loc>
-    <lastmod>2025-02-19T18:02:55.432Z</lastmod>
+    <lastmod>2025-02-26T17:05:47.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/008_FinancialAnalyst/FinancialAnalyst.html</loc>
+    <lastmod>2025-02-26T17:05:47.448Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/003_ChoiceDilemma/ChoiceDilemmas.html</loc>
-    <lastmod>2025-02-19T18:02:55.431Z</lastmod>
+    <lastmod>2025-02-26T17:05:47.447Z</lastmod>
   </url>
   <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-02-19T18:02:55.429Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-02-19T18:02:55.430Z</lastmod>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/001_Cryptic/cryptic_clues_experiment.html</loc>
+    <lastmod>2025-02-26T17:05:47.447Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/004_DigitalCryptid/Thoughts.html</loc>
-    <lastmod>2025-02-19T18:02:55.431Z</lastmod>
+    <lastmod>2025-02-26T17:05:47.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-02-26T17:05:47.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/about.html</loc>
+    <lastmod>2025-02-26T17:05:47.446Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/006_Nature/Nature.html</loc>
-    <lastmod>2025-02-19T18:02:55.432Z</lastmod>
+    <lastmod>2025-02-26T17:05:47.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-02-26T17:05:47.447Z</lastmod>
   </url>
   <url>
     <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/002_Roast/Roast.html</loc>
-    <lastmod>2025-02-19T18:02:55.431Z</lastmod>
+    <lastmod>2025-02-26T17:05:47.447Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vidursaigal.github.io/comm4190_S25_Using_LLMs_Blog/posts/007_CustomerSupport/CustomerSupport.html</loc>
+    <lastmod>2025-02-26T17:05:47.448Z</lastmod>
   </url>
 </urlset>

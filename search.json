@@ -1,47 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Explorations with LLMs",
-    "section": "",
-    "text": "Virtual Botanical Gardens – Narratives from Simulated Growth\n\n\n\n\n\n\nLLMs\n\n\ndigital_gardens\n\n\nsimulation\n\n\nnature\n\n\ncreative_narratives\n\n\n\nExploring how an LLM reasons about nature and translates plant growth data and simulation models into rich narratives about a digital garden, capturing themes of nature, decay, and regeneration that resonate with our uniquely human sensory experiences.\n\n\n\n\n\nFeb 19, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding Life: How LLMs Tackle Genomic Sequences and Protein Structures\n\n\n\n\n\n\nLLMs\n\n\nbiological_data\n\n\ngenomics\n\n\nproteomics\n\n\nAI_analysis\n\n\n\nAn in-depth exploration into how large language models interact with two types of biological data—genomic sequences and protein structure data—featuring live tests, detailed commentary, and examples of AI responses.\n\n\n\n\n\nFeb 17, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nHaunted Algorithms: Unearthing the Folklore of Digital Cryptids\n\n\n\n\n\n\nLLMs\n\n\nurban_legends\n\n\nAI_ghost_stories\n\n\nculture\n\n\n\nA creative exploration into how interactions with AI reveal the urban legends and ghost stories emerging from generative models, with analysis of AI responses and their underlying mechanics.\n\n\n\n\n\nFeb 12, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nHow LLMs Help Us Navigate Choice Dilemmas\n\n\n\n\n\n\nLLMs\n\n\ndecision_making\n\n\ndilemmas\n\n\nethics\n\n\n\nExamining how large language models can analyze, reflect on, and guide us through complex decisions.\n\n\n\n\n\nFeb 10, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master the Art of the Comedic Roast?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nstyle\n\n\nhumor\n\n\n\nExploring whether large language models can produce clever, good-natured roasts without crossing ethical lines.\n\n\n\n\n\nFeb 5, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master Cryptic Clues?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nreasoning\n\n\ncryptic_crosswords\n\n\n\nTesting whether large language models can craft and solve cryptic crossword clues\n\n\n\n\n\nFeb 3, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html",
-    "href": "posts/001_Cryptic/cryptic_clues_experiment.html",
-    "title": "Can LLMs Master Cryptic Clues?",
-    "section": "",
-    "text": "For many puzzle enthusiasts, cryptic crosswords represent the pinnacle of clever wordplay. Crafting (and solving) cryptic clues requires two parts:\n\nA definition of the answer\nA wordplay hint (an anagram, hidden word, or another playful manipulation)\n\nThese two components are typically combined in a single short clue, creating a riddle that demands careful linguistic or logical parsing. The question we want to answer in this post is:\n\nCan a Large Language Model (LLM) craft valid cryptic clues that both define the word and present correct wordplay?\n\nAdditionally, we will see if an LLM can interpret the rationale behind cryptic clues—essentially, can it solve them and provide a breakdown of the wordplay?"
-  },
-  {
-    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#introduction",
-    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#introduction",
-    "title": "Can LLMs Master Cryptic Clues?",
-    "section": "",
-    "text": "For many puzzle enthusiasts, cryptic crosswords represent the pinnacle of clever wordplay. Crafting (and solving) cryptic clues requires two parts:\n\nA definition of the answer\nA wordplay hint (an anagram, hidden word, or another playful manipulation)\n\nThese two components are typically combined in a single short clue, creating a riddle that demands careful linguistic or logical parsing. The question we want to answer in this post is:\n\nCan a Large Language Model (LLM) craft valid cryptic clues that both define the word and present correct wordplay?\n\nAdditionally, we will see if an LLM can interpret the rationale behind cryptic clues—essentially, can it solve them and provide a breakdown of the wordplay?"
-  },
-  {
-    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#background-on-cryptic-clues",
-    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#background-on-cryptic-clues",
-    "title": "Can LLMs Master Cryptic Clues?",
-    "section": "Background on Cryptic Clues",
-    "text": "Background on Cryptic Clues\nA traditional (UK-style) cryptic clue has:\n\nDefinition part: A direct definition of the solution word/phrase (similar to a standard crossword clue).\nWordplay part: A set of instructions for how to manipulate letters (anagrams, hidden words, homophones, reversals, etc.) to arrive at the same solution.\n\nFor example, a classic short cryptic clue is:\n\nDoctor in short supply (3)\n\n\nThe answer is DOC.\nDefinition: “Doctor” is the direct definition for “doc”.\nWordplay: “in short supply” is instructing us to take “supply” and shorten it (suppl) or notice that “in short” might be indicating to chop off the last letters. The exact mechanism can vary depending on style, but it usually references a form of truncation or pun."
-  },
-  {
-    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#prompting-an-llm-to-create-cryptic-clues",
-    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#prompting-an-llm-to-create-cryptic-clues",
-    "title": "Can LLMs Master Cryptic Clues?",
-    "section": "Prompting an LLM to Create Cryptic Clues",
-    "text": "Prompting an LLM to Create Cryptic Clues\nWe experimented with prompting a well-known LLM (we used GPT-4 in this case, but you can attempt similar prompts with other models). Our prompt was structured to explain the concept:\n\n“Please create a cryptic crossword clue for the word ACME. The clue must include a definition and a wordplay segment, in typical cryptic style.”\n\n\nGPT-4’s Response\nA top tip for Emily’s company (4)\nProposed Explanation: - Definition: “A top” is a concise definition for ACME (meaning the highest point). - Wordplay: “tip for Emily’s company” might be instructing us to take the first letter (tip) of “Emily” (E) plus a synonym for “company” (e.g., C0 for ‘Co.’?), forming “E + C0” = “EC0”? That’s not exactly ACME."
-  },
-  {
-    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#conclusion",
-    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#conclusion",
-    "title": "Can LLMs Master Cryptic Clues?",
-    "section": "Conclusion",
-    "text": "Conclusion\n\nLLMs can approximate cryptic crossword clue styles, especially if you provide instructions on structure and examples.\nAccuracy varies: Some attempts fail to connect the wordplay steps properly, indicating the complexity of cryptic logic.\nChain-of-Thought: When asked to explain the solution, LLMs often give plausible justifications, demonstrating how they might parse the puzzle.\n\nUltimately, cryptic crosswords demand exactness in logic, and LLMs are still prone to small mistakes in letter manipulation or wordplay instructions. However, with iterative prompts and examples, they can learn to craft passable (sometimes even excellent) cryptic clues—and solve them!"
-  },
-  {
     "objectID": "posts/005_BiologicalData/DNAProtein.html",
     "href": "posts/005_BiologicalData/DNAProtein.html",
     "title": "Decoding Life: How LLMs Tackle Genomic Sequences and Protein Structures",
@@ -89,6 +47,62 @@
     "title": "Decoding Life: How LLMs Tackle Genomic Sequences and Protein Structures",
     "section": "References and Further Reading",
     "text": "References and Further Reading\n\nNCBI: Genomic Sequence Analysis\nProtein Data Bank (PDB)\nArticles on LLMs in Bioinformatics and Computational Biology\n\nFor a deeper dive into biological data analysis and the potential of AI in life sciences, explore these resources."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "",
+    "text": "Financial analysis is a complex task that traditionally requires skilled professionals to interpret market data, analyze trends, and generate comprehensive reports. With the advent of large language models (LLMs), there is growing interest in understanding whether these AI systems can perform similar tasks effectively.\nIn this post, we explore how an LLM can act as a virtual financial analyst, capable of processing financial data, generating market reports, and even assessing risks. We provide detailed examples and simulated responses to illustrate the capabilities and limitations of AI in this demanding role."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#introduction",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#introduction",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "",
+    "text": "Financial analysis is a complex task that traditionally requires skilled professionals to interpret market data, analyze trends, and generate comprehensive reports. With the advent of large language models (LLMs), there is growing interest in understanding whether these AI systems can perform similar tasks effectively.\nIn this post, we explore how an LLM can act as a virtual financial analyst, capable of processing financial data, generating market reports, and even assessing risks. We provide detailed examples and simulated responses to illustrate the capabilities and limitations of AI in this demanding role."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#background-on-financial-analysis-tasks",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#background-on-financial-analysis-tasks",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "Background on Financial Analysis Tasks",
+    "text": "Background on Financial Analysis Tasks\nFinancial analysts are responsible for gathering data from various sources, interpreting market trends, and producing reports that guide investment and business decisions. Their tasks often include:\n\nData Analysis: Examining historical stock prices, economic indicators, and market sentiment.\nReport Generation: Creating narratives that summarize financial performance and forecast future trends.\nRisk Assessment: Evaluating potential risks and opportunities in investment portfolios.\n\nLLMs, with their ability to process and generate text based on vast datasets, offer a promising alternative to traditional financial analysis by synthesizing complex information into coherent, human-readable reports."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#experiment-simulating-financial-analysis",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#experiment-simulating-financial-analysis",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "Experiment: Simulating Financial Analysis",
+    "text": "Experiment: Simulating Financial Analysis\nWe conducted a series of tests to assess how the AI handles financial analysis tasks. Below are two examples demonstrating the AI’s ability to generate market reports and risk assessments.\n\nTest 1: Market Report Generation\nUser Prompt:\n\n“Generate a market report summarizing the performance of the technology sector over the last quarter, highlighting key trends and potential growth areas.”\n\nAI Response:\n\n“Over the last quarter, the technology sector has exhibited robust growth driven by advancements in artificial intelligence, cloud computing, and semiconductor innovations. Key trends include:\n\nRevenue Growth: Many tech companies reported double-digit revenue increases, particularly those with a strong focus on AI and machine learning.\nInnovation in Hardware: Semiconductor manufacturers are experiencing rapid growth as demand for high-performance chips surges, fueled by the expansion of data centers and edge computing.\nInvestment in R&D: Increased capital allocation towards research and development has led to the launch of innovative products and services, reinforcing market leadership.\n\nThe sector appears poised for continued growth, although potential regulatory changes and supply chain disruptions remain as risks. Overall, the technology sector’s performance reflects a strong investor sentiment and an accelerating pace of innovation.”\n\n\n\nTest 2: Risk Assessment Analysis\nUser Prompt:\n\n“Evaluate the potential risks associated with investing in renewable energy stocks in the current market environment.”\n\nAI Response:\n\n“Investing in renewable energy stocks presents a number of opportunities, yet several risks need to be considered:\n\nRegulatory Uncertainty: Changes in government policies and subsidies can have a significant impact on the profitability of renewable energy companies. Policy reversals or delays in legislation may pose challenges.\nMarket Volatility: While renewable energy is a growing sector, it is also subject to market volatility driven by fluctuations in commodity prices, global economic conditions, and competitive pressures from traditional energy sources.\nTechnological Risks: The rapid pace of technological innovation means that current investments may quickly become outdated if newer, more efficient technologies emerge.\nSupply Chain Constraints: Issues such as shortages of critical materials (e.g., rare earth metals) or disruptions in manufacturing processes can impede growth and affect stock performance.\n\nDespite these risks, strong long-term growth prospects remain, particularly for companies that are well-positioned to innovate and adapt to evolving market dynamics.”"
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#extended-commentary-and-analysis",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#extended-commentary-and-analysis",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "Extended Commentary and Analysis",
+    "text": "Extended Commentary and Analysis\nThe simulated responses provide a comprehensive view of the AI’s financial analysis capabilities. Here are some key observations:\n\nDetail and Structure: The AI-generated market report is structured clearly with bullet points, making it easy to digest complex financial information. The response covers revenue trends, technological innovation, and potential risks, mirroring the structure of professional reports.\nBalanced Perspective: In the risk assessment, the AI identifies multiple factors, from regulatory and market risks to technological and supply chain challenges. This balanced perspective is essential for realistic financial analysis.\nUse of Technical Language: The AI effectively uses technical terms like “double-digit revenue increases,” “edge computing,” and “capital allocation,” indicating that it draws on a deep corpus of financial literature.\nLimitations: While the responses are informative, they are based on statistical patterns rather than real-time market data. Thus, they are more suited for educational or hypothetical scenarios rather than live financial decision-making.\n\nThese examples demonstrate that LLMs can transform raw financial data and trends into coherent narratives. However, for precise, actionable insights, they should be complemented by up-to-date data analytics tools and human expertise."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#broader-implications-and-future-directions",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#broader-implications-and-future-directions",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "Broader Implications and Future Directions",
+    "text": "Broader Implications and Future Directions\nThe ability of LLMs to simulate complex tasks like financial analysis has significant implications for business and employment:\n\nCost Reduction: Automating routine analytical tasks can reduce operational costs for businesses and allow human analysts to focus on more strategic decisions.\nAccessibility: Smaller firms and startups could access high-quality financial analysis without the need for large teams of analysts, leveling the playing field.\nHybrid Models: The future likely lies in hybrid models where LLMs handle data synthesis and preliminary reporting, while human experts provide contextual insights and final decision-making.\n\nFurthermore, as AI models continue to improve with domain-specific training, their financial analysis capabilities will become more accurate and nuanced. This could revolutionize how investment decisions are made, enabling more data-driven and automated approaches that complement human intuition."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#conclusion",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#conclusion",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "Conclusion",
+    "text": "Conclusion\nOur exploration of the virtual financial analyst demonstrates that LLMs can indeed tackle complex financial analysis tasks that typically require dedicated human employees. From generating structured market reports to performing balanced risk assessments, the AI shows promise in synthesizing financial data into coherent narratives.\nWhile current models rely on statistical patterns and lack real-time integration with market data, their ability to process and articulate complex financial concepts is remarkable. The future of financial analysis may well lie in hybrid systems that blend the computational power of AI with human expertise, ultimately enhancing decision-making processes and making high-level analysis more accessible.\nHow do you envision the role of AI evolving in the field of financial analysis? Share your insights and join the discussion on the future of automated financial services."
+  },
+  {
+    "objectID": "posts/008_FinancialAnalyst/FinancialAnalyst.html#references-and-further-reading",
+    "href": "posts/008_FinancialAnalyst/FinancialAnalyst.html#references-and-further-reading",
+    "title": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis",
+    "section": "References and Further Reading",
+    "text": "References and Further Reading\n\nFinancial Analysis with AI: Trends and Applications\nAI in Business: The Future of Automation\nMachine Learning in Finance\nThe Role of Human-AI Collaboration in Financial Analysis\n\nExplore these resources to gain further insights into the evolving role of AI in complex financial tasks."
   },
   {
     "objectID": "posts/003_ChoiceDilemma/ChoiceDilemmas.html",
@@ -175,25 +189,39 @@
     "text": "Conclusion\nLarge Language Models can serve as powerful sounding boards when it comes to choice dilemmas. Whether you’re debating a major career move or grappling with ethical tension, LLMs excel at enumerating the elements of a decision, highlighting potential outcomes, and prompting further reflection.\nHowever, it’s vital to remember that while an LLM can simulate depth, it lacks actual human conscience, experience, and emotional stakes. You remain the best judge of what aligns with your personal values, relationships, and life circumstances.\nIn essence, treat an LLM as an analytical ally: a tool that organizes and clarifies, rather than one that prescribes. Let it expand your perspective, but ultimately, the final call is yours.\nHave you used an LLM to help sort through a dilemma? Was it enlightening or merely interesting? Share your thoughts and experiences below!"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html",
+    "href": "posts/001_Cryptic/cryptic_clues_experiment.html",
+    "title": "Can LLMs Master Cryptic Clues?",
     "section": "",
-    "text": "About This Blog\nWelcome to this blog, a space dedicated to exploring the fascinating ways large language models (LLMs) interpret and generate human-like communication. Each post dives into a different aspect of AI-driven text generation—whether it’s testing how well LLMs recognize idioms, examining their ability to mimic nuanced human expression, or showcasing practical applications like branding and content creation. Through short, engaging analyses, we uncover both the strengths and limitations of AI-powered language tools and their evolving role in digital communication.\nWhether you’re an AI enthusiast, a researcher, or just curious about how these models work, this blog offers a fresh and thought-provoking look at the intersection of technology and language.\nAbout Me\nI’m Vidur J. Saigal, a bioengineer with a passion for computational science, data-driven decision-making, and human-computer interaction. With experience spanning immunology research, machine learning applications, and business strategy, I enjoy breaking down complex problems—whether in biotech, AI, or consulting. This blog is my space to experiment with and analyze how AI systems engage with human communication, informed by my background in both technical and strategic fields."
+    "text": "For many puzzle enthusiasts, cryptic crosswords represent the pinnacle of clever wordplay. Crafting (and solving) cryptic clues requires two parts:\n\nA definition of the answer\nA wordplay hint (an anagram, hidden word, or another playful manipulation)\n\nThese two components are typically combined in a single short clue, creating a riddle that demands careful linguistic or logical parsing. The question we want to answer in this post is:\n\nCan a Large Language Model (LLM) craft valid cryptic clues that both define the word and present correct wordplay?\n\nAdditionally, we will see if an LLM can interpret the rationale behind cryptic clues—essentially, can it solve them and provide a breakdown of the wordplay?"
   },
   {
-    "objectID": "posts/000_test_post/index.html",
-    "href": "posts/000_test_post/index.html",
-    "title": "A test post",
+    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#introduction",
+    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#introduction",
+    "title": "Can LLMs Master Cryptic Clues?",
     "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+    "text": "For many puzzle enthusiasts, cryptic crosswords represent the pinnacle of clever wordplay. Crafting (and solving) cryptic clues requires two parts:\n\nA definition of the answer\nA wordplay hint (an anagram, hidden word, or another playful manipulation)\n\nThese two components are typically combined in a single short clue, creating a riddle that demands careful linguistic or logical parsing. The question we want to answer in this post is:\n\nCan a Large Language Model (LLM) craft valid cryptic clues that both define the word and present correct wordplay?\n\nAdditionally, we will see if an LLM can interpret the rationale behind cryptic clues—essentially, can it solve them and provide a breakdown of the wordplay?"
   },
   {
-    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "title": "A test post",
-    "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#background-on-cryptic-clues",
+    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#background-on-cryptic-clues",
+    "title": "Can LLMs Master Cryptic Clues?",
+    "section": "Background on Cryptic Clues",
+    "text": "Background on Cryptic Clues\nA traditional (UK-style) cryptic clue has:\n\nDefinition part: A direct definition of the solution word/phrase (similar to a standard crossword clue).\nWordplay part: A set of instructions for how to manipulate letters (anagrams, hidden words, homophones, reversals, etc.) to arrive at the same solution.\n\nFor example, a classic short cryptic clue is:\n\nDoctor in short supply (3)\n\n\nThe answer is DOC.\nDefinition: “Doctor” is the direct definition for “doc”.\nWordplay: “in short supply” is instructing us to take “supply” and shorten it (suppl) or notice that “in short” might be indicating to chop off the last letters. The exact mechanism can vary depending on style, but it usually references a form of truncation or pun."
+  },
+  {
+    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#prompting-an-llm-to-create-cryptic-clues",
+    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#prompting-an-llm-to-create-cryptic-clues",
+    "title": "Can LLMs Master Cryptic Clues?",
+    "section": "Prompting an LLM to Create Cryptic Clues",
+    "text": "Prompting an LLM to Create Cryptic Clues\nWe experimented with prompting a well-known LLM (we used GPT-4 in this case, but you can attempt similar prompts with other models). Our prompt was structured to explain the concept:\n\n“Please create a cryptic crossword clue for the word ACME. The clue must include a definition and a wordplay segment, in typical cryptic style.”\n\n\nGPT-4’s Response\nA top tip for Emily’s company (4)\nProposed Explanation: - Definition: “A top” is a concise definition for ACME (meaning the highest point). - Wordplay: “tip for Emily’s company” might be instructing us to take the first letter (tip) of “Emily” (E) plus a synonym for “company” (e.g., C0 for ‘Co.’?), forming “E + C0” = “EC0”? That’s not exactly ACME."
+  },
+  {
+    "objectID": "posts/001_Cryptic/cryptic_clues_experiment.html#conclusion",
+    "href": "posts/001_Cryptic/cryptic_clues_experiment.html#conclusion",
+    "title": "Can LLMs Master Cryptic Clues?",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nLLMs can approximate cryptic crossword clue styles, especially if you provide instructions on structure and examples.\nAccuracy varies: Some attempts fail to connect the wordplay steps properly, indicating the complexity of cryptic logic.\nChain-of-Thought: When asked to explain the solution, LLMs often give plausible justifications, demonstrating how they might parse the puzzle.\n\nUltimately, cryptic crosswords demand exactness in logic, and LLMs are still prone to small mistakes in letter manipulation or wordplay instructions. However, with iterative prompts and examples, they can learn to craft passable (sometimes even excellent) cryptic clues—and solve them!"
   },
   {
     "objectID": "posts/004_DigitalCryptid/Thoughts.html",
@@ -280,6 +308,20 @@
     "text": "References and Further Reading\n\nLoab: The First AI-Generated Cryptid oai_citation_attribution:1‡en.wikipedia.org\nHow Spooked Should We Be by AI Ghost Stories? oai_citation_attribution:2‡nymag.com\nDrowning in Slop: The AI Content Deluge oai_citation_attribution:3‡nymag.com\nArticles on AI folklore and generative culture from The Verge and New York Magazine\n\nExplore these sources to dive deeper into the interplay between AI, urban legends, and cultural memory."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Explorations with LLMs",
+    "section": "",
+    "text": "Virtual Financial Analyst: LLMs Tackling Complex Financial Analysis\n\n\n\n\n\n\nLLMs\n\n\nfinancial_analysis\n\n\nautomation\n\n\nAI_analysis\n\n\n\nA comprehensive look at how large language models can perform tasks typically reserved for human financial analysts, including market analysis, report generation, and risk assessment, complete with simulated examples and detailed analysis.\n\n\n\n\n\nFeb 26, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nAutomated Customer Support: Can LLMs Replace Human Agents?\n\n\n\n\n\n\nLLMs\n\n\ncustomer_support\n\n\nautomation\n\n\nAI_analysis\n\n\n\nAn in-depth exploration of how a large language model handles the complex tasks of customer service, complete with simulated interactions, detailed analyses, and reflections on the future of automated support.\n\n\n\n\n\nFeb 24, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nVirtual Botanical Gardens – Narratives from Simulated Growth\n\n\n\n\n\n\nLLMs\n\n\ndigital_gardens\n\n\nsimulation\n\n\nnature\n\n\ncreative_narratives\n\n\n\nExploring how an LLM reasons about nature and translates plant growth data and simulation models into rich narratives about a digital garden, capturing themes of nature, decay, and regeneration that resonate with our uniquely human sensory experiences.\n\n\n\n\n\nFeb 19, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding Life: How LLMs Tackle Genomic Sequences and Protein Structures\n\n\n\n\n\n\nLLMs\n\n\nbiological_data\n\n\ngenomics\n\n\nproteomics\n\n\nAI_analysis\n\n\n\nAn in-depth exploration into how large language models interact with two types of biological data—genomic sequences and protein structure data—featuring live tests, detailed commentary, and examples of AI responses.\n\n\n\n\n\nFeb 17, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nHaunted Algorithms: Unearthing the Folklore of Digital Cryptids\n\n\n\n\n\n\nLLMs\n\n\nurban_legends\n\n\nAI_ghost_stories\n\n\nculture\n\n\n\nA creative exploration into how interactions with AI reveal the urban legends and ghost stories emerging from generative models, with analysis of AI responses and their underlying mechanics.\n\n\n\n\n\nFeb 12, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nHow LLMs Help Us Navigate Choice Dilemmas\n\n\n\n\n\n\nLLMs\n\n\ndecision_making\n\n\ndilemmas\n\n\nethics\n\n\n\nExamining how large language models can analyze, reflect on, and guide us through complex decisions.\n\n\n\n\n\nFeb 10, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master the Art of the Comedic Roast?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nstyle\n\n\nhumor\n\n\n\nExploring whether large language models can produce clever, good-natured roasts without crossing ethical lines.\n\n\n\n\n\nFeb 5, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nCan LLMs Master Cryptic Clues?\n\n\n\n\n\n\nLLMs\n\n\nlanguage\n\n\nreasoning\n\n\ncryptic_crosswords\n\n\n\nTesting whether large language models can craft and solve cryptic crossword clues\n\n\n\n\n\nFeb 3, 2025\n\n\nVidur Saigal\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\n\n\n\nLLMs\n\n\nprompting\n\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About This Blog\nWelcome to this blog, a space dedicated to exploring the fascinating ways large language models (LLMs) interpret and generate human-like communication. Each post dives into a different aspect of AI-driven text generation—whether it’s testing how well LLMs recognize idioms, examining their ability to mimic nuanced human expression, or showcasing practical applications like branding and content creation. Through short, engaging analyses, we uncover both the strengths and limitations of AI-powered language tools and their evolving role in digital communication.\nWhether you’re an AI enthusiast, a researcher, or just curious about how these models work, this blog offers a fresh and thought-provoking look at the intersection of technology and language.\nAbout Me\nI’m Vidur J. Saigal, a bioengineer with a passion for computational science, data-driven decision-making, and human-computer interaction. With experience spanning immunology research, machine learning applications, and business strategy, I enjoy breaking down complex problems—whether in biotech, AI, or consulting. This blog is my space to experiment with and analyze how AI systems engage with human communication, informed by my background in both technical and strategic fields."
+  },
+  {
     "objectID": "posts/006_Nature/Nature.html",
     "href": "posts/006_Nature/Nature.html",
     "title": "Virtual Botanical Gardens – Narratives from Simulated Growth",
@@ -350,6 +392,20 @@
     "text": "References and Further Reading\n\nNCBI: Genomic and Botanical Data\nPlant Growth Simulation Models\nPhilosophy of Nature in Literature\nThe Aesthetics of Digital Landscapes\n\nExplore these resources for a deeper dive into the convergence of digital data and natural beauty, and the emerging role of AI in reimagining our sensory world."
   },
   {
+    "objectID": "posts/000_test_post/index.html",
+    "href": "posts/000_test_post/index.html",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
+    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
     "objectID": "posts/002_Roast/Roast.html",
     "href": "posts/002_Roast/Roast.html",
     "title": "Can LLMs Master the Art of the Comedic Roast?",
@@ -411,5 +467,61 @@
     "title": "Can LLMs Master the Art of the Comedic Roast?",
     "section": "Conclusion",
     "text": "Conclusion\nLLMs can serve as aspiring stand-up comics when prompted correctly, generating roasts that are entertaining without venturing into mean-spirited territory. While the comedic results often remain somewhat generic and can become repetitive, with careful prompting and moderation, an LLM can be a fun tool for crafting lighthearted jabs.\nHowever, to preserve the human element—the subtle, improvised nature of humor—roasts might still benefit from a comedic writer’s personal touch. An AI doesn’t truly understand the roastee’s feelings, nor can it interpret the room’s atmosphere and adapt on the fly.\nIn short, LLMs can be comedic co-writers but are best used as a stepping stone, rather than a full replacement, for the real humor and spontaneity found at live roasts. Let us know your experiences if you’ve tried any comedic writing or roasting sessions with an LLM—did it nail the punchline or fall flat on its mechanical face?"
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "",
+    "text": "Customer support is a complex, multifaceted role that involves not just answering queries but also empathizing with customers, troubleshooting issues, and adapting to a wide range of scenarios. Traditionally, this task requires trained human agents. However, recent advances in large language models (LLMs) have sparked the question: Can LLMs replace human customer support agents?\nIn this post, we explore how an LLM handles customer service tasks through simulated interactions. We analyze the AI’s responses to common customer queries, assess its ability to empathize, and discuss the broader implications for businesses and employees."
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#introduction",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#introduction",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "",
+    "text": "Customer support is a complex, multifaceted role that involves not just answering queries but also empathizing with customers, troubleshooting issues, and adapting to a wide range of scenarios. Traditionally, this task requires trained human agents. However, recent advances in large language models (LLMs) have sparked the question: Can LLMs replace human customer support agents?\nIn this post, we explore how an LLM handles customer service tasks through simulated interactions. We analyze the AI’s responses to common customer queries, assess its ability to empathize, and discuss the broader implications for businesses and employees."
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#background-on-customer-support",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#background-on-customer-support",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "Background on Customer Support",
+    "text": "Background on Customer Support\nEffective customer support requires a mix of technical knowledge, communication skills, empathy, and problem-solving abilities. Human agents often have to balance scripted responses with personalized interactions to resolve issues and maintain customer satisfaction.\nLLMs are trained on diverse text data that include customer service dialogues, technical documentation, and empathetic language from various sources. This background allows them to generate responses that are contextually appropriate, though challenges remain in handling nuance and unpredictable customer behavior."
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#experiment-simulating-customer-interactions",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#experiment-simulating-customer-interactions",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "Experiment: Simulating Customer Interactions",
+    "text": "Experiment: Simulating Customer Interactions\nWe conducted a series of tests to evaluate the AI’s performance in typical customer support scenarios. Below are two sample prompts along with simulated responses from the LLM.\n\nTest 1: Handling a Billing Issue\nUser Prompt:\n\n“I was charged twice on my last bill, and I need help getting a refund.”\n\nAI Response:\n\n“I’m sorry to hear about the billing issue. It sounds like you were accidentally charged twice. Could you please provide your account number and the date of the transaction? Once I have those details, I’ll escalate this to our billing department for a quick refund process. I understand how frustrating this can be and appreciate your patience.”\n\n\n\nTest 2: Technical Support for a Software Issue\nUser Prompt:\n\n“My software crashes every time I try to upload a file. What can I do?”\n\nAI Response:\n\n“I’m sorry that you’re experiencing crashes. Let’s try a few troubleshooting steps:\n\n\n\nPlease ensure you are using the latest version of the software.\nTry restarting your computer and attempt the upload again.\nIf the problem persists, could you send me the error message or a screenshot of the issue?\n\n\n\nThese steps will help us diagnose the issue more effectively. Thank you for your cooperation.”"
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#analysis-of-ai-responses",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#analysis-of-ai-responses",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "Analysis of AI Responses",
+    "text": "Analysis of AI Responses\nThe simulated responses reveal several strengths and weaknesses of the LLM in a customer support context:\n\nEmpathy and Apology: Both responses begin with an apology and acknowledge the customer’s frustration, a key element in humanizing interactions.\nClarity and Structure: The responses provide clear, actionable steps, demonstrating the LLM’s ability to organize technical information in a user-friendly manner.\nRequest for Additional Information: In both cases, the AI asks for further details to tailor its assistance, mirroring human follow-up strategies.\nLimitations: While the responses are coherent and helpful, they sometimes lack a personalized touch. Nuances such as tone adjustments based on customer mood and more creative problem-solving can be areas for further improvement.\n\nOverall, the LLM shows promising capability in automating routine customer support tasks, but may still require human oversight for more nuanced or emotionally charged situations."
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#extended-commentary",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#extended-commentary",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "Extended Commentary",
+    "text": "Extended Commentary\nAutomated customer support is a promising application of LLMs, offering benefits such as 24/7 availability and consistency in responses. However, there are several factors to consider:\n\nScalability vs. Personalization: While LLMs can handle a high volume of queries, tailoring responses to individual customer emotions remains a challenge.\nError Handling: Misinterpretation of a query or a failure to grasp context fully can lead to incorrect or unsatisfactory responses. Human agents excel in these unpredictable scenarios.\nContinuous Improvement: As LLMs are further fine-tuned with domain-specific data, their ability to mimic human empathy and nuance is likely to improve. Integrating real-time feedback and sentiment analysis could enhance their effectiveness.\n\nThe integration of LLMs in customer support can free up human agents to handle more complex cases, thereby increasing overall efficiency. This hybrid model, where AI handles routine tasks and humans manage escalations, represents a practical approach to automation in service industries."
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#conclusion",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#conclusion",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "Conclusion",
+    "text": "Conclusion\nOur exploration into automated customer support demonstrates that LLMs can effectively manage many routine inquiries that typically require a human agent. The simulated interactions show that while the AI is capable of empathizing, clarifying issues, and providing structured assistance, there are still nuances—particularly in personalization and adaptive problem-solving—that benefit from human intervention.\nIn the future, a hybrid approach combining AI efficiency with human empathy could redefine customer support, ensuring that customers receive timely, accurate, and emotionally intelligent service.\nWhat are your thoughts on AI in customer service? Share your experiences and ideas for how this technology can be further improved."
+  },
+  {
+    "objectID": "posts/007_CustomerSupport/CustomerSupport.html#references-and-further-reading",
+    "href": "posts/007_CustomerSupport/CustomerSupport.html#references-and-further-reading",
+    "title": "Automated Customer Support: Can LLMs Replace Human Agents?",
+    "section": "References and Further Reading",
+    "text": "References and Further Reading\n\nCustomer Service AI: Trends and Challenges\nThe Future of Customer Support with AI\nEmpathy in AI: Bridging the Human-Machine Divide\nLLMs in Business Automation\n\nExplore these resources for further insights into the evolving role of AI in customer service."
   }
 ]
