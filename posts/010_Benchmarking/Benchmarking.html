@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vidur Saigal">
+<meta name="dcterms.date" content="2025-03-05">
+<meta name="description" content="A comprehensive overview of the challenges in benchmarking large language models, reviewing common benchmarks and their flaws, and exploring ideas for designing an ideal evaluation framework for AI systems.">
+
+<title>The Benchmarking Conundrum: Problems, Pitfalls, and a Vision for Ideal LLM Evaluation – My Explorations with LLMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Explorations with LLMs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/vidursaigal"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/vidur_saigal"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The Benchmarking Conundrum: Problems, Pitfalls, and a Vision for Ideal LLM Evaluation</h1>
+                  <div>
+        <div class="description">
+          A comprehensive overview of the challenges in benchmarking large language models, reviewing common benchmarks and their flaws, and exploring ideas for designing an ideal evaluation framework for AI systems.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">benchmarking</div>
+                <div class="quarto-category">AI_industry</div>
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vidur Saigal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 5, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Benchmarking large language models (LLMs) is a critical task for measuring progress in AI, yet it remains one of the most contentious and challenging areas in the field. Despite the proliferation of evaluation frameworks over the past few years, such as GLUE, SuperGLUE, Big-Bench, and HumanEval, significant concerns persist regarding their ability to capture the full spectrum of LLM capabilities.</p>
+<p>In this post, we provide a comprehensive overview of the common benchmarks used for LLM evaluation, detail their inherent flaws, and discuss what an ideal benchmark might look like in the future. By analyzing current practices and shortcomings (, ), we aim to chart a path toward a more robust and meaningful evaluation framework.</p>
+</section>
+<section id="common-benchmarks-for-llms" class="level2">
+<h2 class="anchored" data-anchor-id="common-benchmarks-for-llms">Common Benchmarks for LLMs</h2>
+<p>Over the past few years, several benchmarks have emerged as the standard for assessing the performance of language models. Some of the most widely recognized include:</p>
+<ul>
+<li><strong>GLUE and SuperGLUE:</strong> Designed to test a model’s ability to understand and process natural language through a series of tasks ranging from sentiment analysis to textual entailment.</li>
+<li><strong>SQuAD (Stanford Question Answering Dataset):</strong> Focuses on reading comprehension and the ability to extract information from text passages.</li>
+<li><strong>BIG-Bench:</strong> A diverse, large-scale benchmark that includes tasks from multiple domains, intended to probe the limits of model reasoning and generalization.</li>
+<li><strong>HumanEval:</strong> Specifically targets code generation and reasoning skills, assessing a model’s ability to generate syntactically correct and semantically meaningful code.</li>
+<li><strong>LAMBADA and Winograd Schemas:</strong> Evaluate the model’s capacity to handle long-context understanding and commonsense reasoning.</li>
+</ul>
+<p>These benchmarks have been instrumental in driving the field forward, but they are not without significant limitations.</p>
+</section>
+<section id="flaws-and-limitations-of-current-benchmarks" class="level2">
+<h2 class="anchored" data-anchor-id="flaws-and-limitations-of-current-benchmarks">Flaws and Limitations of Current Benchmarks</h2>
+<p>Despite their widespread use, current benchmarks suffer from several inherent flaws:</p>
+<section id="static-and-overfitted-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="static-and-overfitted-datasets">1. <strong>Static and Overfitted Datasets</strong></h3>
+<p>Many benchmarks, like GLUE and SQuAD, have been around for several years. As models continue to be trained on similar datasets, there is a risk of overfitting to these benchmarks rather than genuinely improving language understanding. This can lead to inflated performance scores that do not necessarily translate to real-world tasks.</p>
+</section>
+<section id="narrow-task-focus" class="level3">
+<h3 class="anchored" data-anchor-id="narrow-task-focus">2. <strong>Narrow Task Focus</strong></h3>
+<p>Most benchmarks focus on specific tasks (e.g., sentiment analysis, question answering) that do not capture the multifaceted nature of language. They often fail to assess abilities such as creativity, long-term reasoning, and the handling of ambiguous or adversarial inputs.</p>
+</section>
+<section id="lack-of-contextual-and-chain-of-thought-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="lack-of-contextual-and-chain-of-thought-evaluation">3. <strong>Lack of Contextual and Chain-of-Thought Evaluation</strong></h3>
+<p>Current benchmarks typically evaluate only the final output of a model, ignoring the intermediate reasoning steps (chain-of-thought) that are critical for understanding how models arrive at their answers. Without assessing these internal processes, it’s hard to gauge whether a model truly understands a task or is simply producing plausible-sounding responses.</p>
+</section>
+<section id="limited-real-world-applicability" class="level3">
+<h3 class="anchored" data-anchor-id="limited-real-world-applicability">4. <strong>Limited Real-World Applicability</strong></h3>
+<p>Benchmarks are often curated in controlled environments and may not reflect the messy, diverse, and dynamic nature of real-world data. As a result, models that perform well on these tests might struggle with real-world tasks where data is noisy and context is variable.</p>
+</section>
+<section id="bias-and-cultural-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="bias-and-cultural-limitations">5. <strong>Bias and Cultural Limitations</strong></h3>
+<p>Many benchmarks are based on datasets that may reflect cultural and linguistic biases. This can skew the evaluation results, leading to models that perform well on a benchmark but fail to generalize across different demographics or languages.</p>
+<p>These limitations collectively point to the need for a more dynamic, comprehensive, and context-aware benchmarking approach.</p>
+</section>
+</section>
+<section id="designing-the-ideal-benchmark" class="level2">
+<h2 class="anchored" data-anchor-id="designing-the-ideal-benchmark">Designing the Ideal Benchmark</h2>
+<p>Given the shortcomings of current evaluation methods, what would an ideal benchmark for LLMs look like? Here are some key characteristics:</p>
+<section id="dynamic-and-continuously-updated" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-and-continuously-updated">1. <strong>Dynamic and Continuously Updated</strong></h3>
+<p>An ideal benchmark should evolve with the language and tasks it is designed to measure. Instead of static datasets, the benchmark could incorporate a continuously updated stream of new data and tasks that reflect current trends, challenges, and linguistic usage patterns.</p>
+</section>
+<section id="multi-dimensional-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="multi-dimensional-evaluation">2. <strong>Multi-Dimensional Evaluation</strong></h3>
+<p>Rather than focusing on a single aspect of language understanding, the benchmark should assess multiple dimensions including:</p>
+<ul>
+<li><strong>Reasoning and Chain-of-Thought:</strong> Evaluating the internal reasoning processes of the model.</li>
+<li><strong>Creativity and Adaptability:</strong> Testing the model’s ability to generate novel and contextually appropriate responses in creative tasks.</li>
+<li><strong>Robustness and Safety:</strong> Assessing the model’s ability to handle ambiguous, adversarial, or biased inputs without generating harmful outputs.</li>
+</ul>
+</section>
+<section id="real-world-and-domain-specific-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="real-world-and-domain-specific-tasks">3. <strong>Real-World and Domain-Specific Tasks</strong></h3>
+<p>To ensure practical relevance, benchmarks should include tasks that mimic real-world applications across different domains—be it customer service, legal analysis, scientific literature, or creative writing. This diversity will help gauge the model’s ability to generalize and perform in various contexts.</p>
+</section>
+<section id="incorporation-of-human-in-the-loop-evaluations" class="level3">
+<h3 class="anchored" data-anchor-id="incorporation-of-human-in-the-loop-evaluations">4. <strong>Incorporation of Human-in-the-Loop Evaluations</strong></h3>
+<p>While automated metrics are useful, human judgment remains crucial for assessing aspects like coherence, relevance, and creativity. An ideal benchmark might blend automated scoring with periodic human evaluations to ensure that the AI’s outputs are not only technically correct but also meaningful and contextually appropriate.</p>
+</section>
+<section id="transparency-and-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="transparency-and-reproducibility">5. <strong>Transparency and Reproducibility</strong></h3>
+<p>The benchmark should be designed with transparency in mind, ensuring that all evaluation criteria, datasets, and scoring methods are publicly available. This openness will help avoid overfitting and allow the community to contribute to and improve the benchmark over time ().</p>
+<p>By combining these features, we can create a benchmark that not only measures current capabilities but also drives innovation towards addressing the deeper challenges of natural language understanding.</p>
+</section>
+</section>
+<section id="industry-perspectives-and-future-outlook" class="level2">
+<h2 class="anchored" data-anchor-id="industry-perspectives-and-future-outlook">Industry Perspectives and Future Outlook</h2>
+<p>The conversation around benchmarking LLMs has significant implications for both academic research and commercial applications. As companies rely more on these models for tasks ranging from customer support to content generation, the need for reliable and comprehensive benchmarks becomes critical.</p>
+<p>Recent industry commentary suggests that the plateauing of model performance on standard benchmarks may indicate that we are reaching the limits of current scaling strategies. This has spurred calls for a paradigm shift—focusing on novel architectures, multi-modal integration, and more nuanced evaluation metrics.</p>
+<p>While GPT-4.5 and similar models have shown impressive performance on traditional benchmarks, the incremental improvements observed have led many to question whether we are merely optimizing within a saturated framework. The ideal benchmark could serve as a catalyst for the next wave of innovation by highlighting not just what current models can do, but where they fall short in real-world complexity.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Benchmarking LLMs is an essential but challenging endeavor, fraught with pitfalls ranging from static datasets to narrow task focus and cultural biases. The release of multiple benchmarks has driven rapid progress, but the limitations of these evaluation methods have become increasingly apparent.</p>
+<p>An ideal benchmark would be dynamic, multi-dimensional, and reflective of real-world applications. It would combine automated metrics with human evaluations, ensuring transparency and reproducibility. Such a benchmark would not only provide a more accurate picture of an AI’s capabilities but also guide the development of the next generation of models.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/vidursaigal\.github\.io\/comm4190_S25_Using_LLMs_Blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
