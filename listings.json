@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/012_TemperatureTopP/TemperatureTopP.html",
+      "/posts/011_Agents/Agents.html",
       "/posts/010_Benchmarking/Benchmarking.html",
       "/posts/009_GPT4.5/GPT4.5.html",
       "/posts/008_FinancialAnalyst/FinancialAnalyst.html",
