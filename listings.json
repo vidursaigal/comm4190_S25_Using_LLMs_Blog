@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/013_TrainingStyles/TrainingStyles2.html",
       "/posts/012_TemperatureTopP/TemperatureTopP.html",
       "/posts/011_Agents/Agents.html",
       "/posts/010_Benchmarking/Benchmarking.html",
