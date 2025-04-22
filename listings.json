@@ -2,6 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/020_TheFuture/Future.html",
+      "/posts/019_LLMIDE's/IDEs.html",
+      "/posts/018_Deepseek/Deepseek.html",
+      "/posts/017_Virology/Virology.html",
+      "/posts/016_CostofAI/CostofAI.html",
+      "/posts/015_NewImageModel/NewImage.html",
       "/posts/014_Transformers/Transformers.html",
       "/posts/013_TrainingStyles/TrainingStyles2.html",
       "/posts/012_TemperatureTopP/TemperatureTopP.html",

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Vidur Saigal">
+<meta name="dcterms.date" content="2025-04-07">
+<meta name="description" content="A comprehensive analysis of how scaling laws govern AI performance and the economic, environmental, and energy costs of training frontier models in 2025.">
 
-<title>About – My Explorations with LLMs</title>
+<title>Scaling Laws and the True Cost of AI in 2025 – My Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,17 +71,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations with LLMs</span>
     </a>
   </div>
@@ -88,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -109,31 +113,97 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Scaling Laws and the True Cost of AI in 2025</h1>
+                  <div>
+        <div class="description">
+          A comprehensive analysis of how scaling laws govern AI performance and the economic, environmental, and energy costs of training frontier models in 2025.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">scaling_laws</div>
+                <div class="quarto-category">AI_costs</div>
+                <div class="quarto-category">sustainability</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Vidur Saigal </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 7, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="Vidur.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>About This Blog</p>
-<p>Welcome to this blog, a space dedicated to exploring the fascinating ways large language models (LLMs) interpret and generate human-like communication. Each post dives into a different aspect of AI-driven text generation—whether it’s testing how well LLMs recognize idioms, examining their ability to mimic nuanced human expression, or showcasing practical applications like branding and content creation. Through short, engaging analyses, we uncover both the strengths and limitations of AI-powered language tools and their evolving role in digital communication.</p>
-<p>Whether you’re an AI enthusiast, a researcher, or just curious about how these models work, this blog offers a fresh and thought-provoking look at the intersection of technology and language.</p>
-<p>About Me</p>
-<p>I’m Vidur J. Saigal, a bioengineer with a passion for computational science, data-driven decision-making, and human-computer interaction. With experience spanning immunology research, machine learning applications, and business strategy, I enjoy breaking down complex problems—whether in biotech, AI, or consulting. This blog is my space to experiment with and analyze how AI systems engage with human communication, informed by my background in both technical and strategic fields.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main>  
-</div>
- <!-- /main -->
+
+
+
+<p>In 2025, empirical scaling laws continue to predict how model performance improves as compute, data, and parameter counts grow, enabling precise planning of AI investments and training budgets . However, the financial outlay and environmental impact of training state‑of‑the‑art models have risen steeply, with GPT‑4 costing an estimated $20&nbsp;million to train and GPT‑4.5 projections nearing $400&nbsp;million . Energy consumption for large models now rivals national grids—GPT‑4 consumed over 62 million kWh in 100 days, while global AI electricity demand could triple by 2030 under current trends . The 2025 AI Index confirms that compute demand, investment, and emissions form a tight triangle influencing policy and industry strategy, underscoring the need for sustainable design and regulatory frameworks to balance innovation with ecological stewardship .</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Scaling laws describe power‑law relationships between model size, dataset size, compute, and performance, guiding practitioners to allocate resources effectively . As parameter counts double, validation loss falls predictably, but the required FLOPs and energy usage increase superlinearly, creating trade‑offs between model accuracy and cost. In this article, we explore how these scaling behaviors translate into real‑world financial and environmental costs in 2025, and discuss strategies to mitigate adverse impacts.</p>
+</section>
+<section id="the-foundations-kaplan-and-chinchilla-laws" class="level2">
+<h2 class="anchored" data-anchor-id="the-foundations-kaplan-and-chinchilla-laws">The Foundations: Kaplan and Chinchilla Laws</h2>
+<p>Kaplan et&nbsp;al.&nbsp;(2020) first empirically demonstrated that cross‑entropy loss for language models scales as a power‑law function of model parameters (N), dataset size (D), and compute (C):</p>
+<ul>
+<li><strong>Loss ∝ N^(-0.076) and Loss ∝ D^(-0.095)</strong> under optimal compute allocation .</li>
+</ul>
+<p>More recent work has reconciled this with Chinchilla’s findings, showing that when non‑embedding parameters are accounted for, both scaling relationships hold across smaller and larger scales, refining the optimal N‑to‑D ratio for a fixed compute budget .</p>
+</section>
+<section id="economic-costs-of-frontier-model-training" class="level2">
+<h2 class="anchored" data-anchor-id="economic-costs-of-frontier-model-training">Economic Costs of Frontier Model Training</h2>
+<p>Training GPT‑3 (175B parameters) cost approximately $4.6&nbsp;million and consumed 1.3&nbsp;million kWh over 34&nbsp;days . GPT‑4’s more complex Mixture‑of‑Experts setup is estimated at $20&nbsp;million and 62&nbsp;million kWh over roughly 100&nbsp;days . Projections for GPT‑4.5 at 10× scale suggest training budgets approaching $400&nbsp;million, underscoring the superlinear cost escalation predicted by scaling laws . Oracle’s Larry Ellison and Anthropic’s Dario Amodei forecast even higher figures for future generations, up to $1&nbsp;billion or more per model iteration .</p>
+</section>
+<section id="energy-consumption-and-environmental-impact" class="level2">
+<h2 class="anchored" data-anchor-id="energy-consumption-and-environmental-impact">Energy Consumption and Environmental Impact</h2>
+<p>Generative AI’s electricity demand in 2025 is projected to exceed 1,500&nbsp;TWh by 2030—comparable to India’s national consumption—driving a cumulative 1.2% rise in global emissions under current policies . MIT researchers estimate that rapid model development adds significant grid and water stress, with AI data centers consuming vast resources and creating localized environmental pressures . While the IMF finds that the economic gains of AI outweigh its social cost of carbon ($50–66&nbsp;billion), critics argue these valuations underestimate downstream climate damages and social inequities .</p>
+</section>
+<section id="the-2025-ai-index-key-insights" class="level2">
+<h2 class="anchored" data-anchor-id="the-2025-ai-index-key-insights">The 2025 AI Index: Key Insights</h2>
+<p>Stanford’s 2025 AI Index presents 12 eye‑opening graphs showing continued growth in AI R&amp;D spending, compute investment, and model sizes, alongside rising concerns over responsible AI and climate impacts . Notably, investment in generative AI has surged tenfold in two years, while average inference cost per token remains flat, indicating efficiency gains offsetting model bloat .</p>
+</section>
+<section id="beyond-compute-efficiency-and-sustainability" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-compute-efficiency-and-sustainability">Beyond Compute: Efficiency and Sustainability</h2>
+<p>Frameworks for reducing AI’s footprint include quantization, pruning, and LoRA adapters, which can cut energy use by 30–50% with minimal performance loss. There are proposals for carbon‑aware scheduling and renewable energy certificates to offset emissions, while OECD research advocates policy incentives for energy‑efficient model design and data center operations .</p>
+</section>
+<section id="future-outlook-and-policy-implications" class="level2">
+<h2 class="anchored" data-anchor-id="future-outlook-and-policy-implications">Future Outlook and Policy Implications</h2>
+<p>As AI scales further, decentralized training on edge clusters may democratize model development while capping centralized data center expansion . Policymakers face choices: subsidize renewable energy in tech hubs, mandate transparency in AI energy reporting, or impose carbon taxes on compute‐heavy research. Balancing innovation with sustainability will define AI’s trajectory in the latter half of the decade.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Scaling laws provide a roadmap for forecasting AI performance gains, but they also signal rapidly rising financial and environmental costs. In 2025, training flagship models demands hundreds of millions of dollars and terawatt‑hours of power, prompting urgent calls for efficiency, renewable integration, and regulatory oversight. By aligning technical best practices with robust policies, the AI community can ensure that the benefits of scaling do not come at the planet’s expense.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -154,6 +224,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
